@@ -1,4 +1,4 @@
-(in-package #:text-to-tex)
+(in-package #:cepl.sdl2-ttf)
 
 (defun init ()
   (unless (= 1 (sdl2-ttf:was-init))
