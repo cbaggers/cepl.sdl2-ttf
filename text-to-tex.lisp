@@ -19,7 +19,7 @@
        (sdl2-ttf:close-font ,var-name))))
 
 (defun text-to-tex (text font &optional (color (v! 255 255 255 0)))
-  (let* ((texture-surface (sdl2-ttf:render-text-blended
+  (let* ((texture-surface (sdl2-ttf:render-utf8-blended
                            font text
                            (round (x color)) (round (y color))
                            (round (z color)) (round (w color))))
