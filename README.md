@@ -28,8 +28,10 @@ It returns a CEPL texture containing the text.
 
 ## Example
 
+```
 (defun test ()
   (init)
   (with-font (font (asdf:system-relative-pathname
                     'sdl2-ttf-examples "examples/PROBE_10PX_OTF.otf"))
     (text-to-tex "hello world" font)))
+```
