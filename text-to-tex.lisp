@@ -1,6 +1,6 @@
 (in-package #:cepl.sdl2-ttf)
 
-(defun init ()
+(defun init-cepl-sdl2-ttf ()
   (unless (= 1 (sdl2-ttf:was-init))
     (assert (and (find-package :cepl.sdl2)
                  cepl.context:*gl-context*)
@@ -9,7 +9,7 @@
       (error "Failed to initialize text-to-tex"))
     t))
 
-(defun quit ()
+(defun quit-cepl-sdl2-ttf ()
   (when (= 1 (sdl2-ttf:was-init))
     (sdl2-ttf:quit)))
 
