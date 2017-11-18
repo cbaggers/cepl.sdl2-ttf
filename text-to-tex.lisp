@@ -3,7 +3,7 @@
 (defun init-cepl-sdl2-ttf ()
   (unless (= 1 (sdl2-ttf:was-init))
     (assert (and (find-package :cepl.sdl2)
-                 cepl.context:*gl-context*)
+                 (not (cepl.lifecycle:uninitialized-p)))
             () "CEPL must be initialized before text-to-tex")
     (unless (= 0 (sdl2-ttf:init))
       (error "Failed to initialize text-to-tex"))
